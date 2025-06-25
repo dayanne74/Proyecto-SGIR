@@ -1,0 +1,48 @@
+POST http://localhost:5000/api/clientes HTTP/1.1
+content-Type: application/json
+
+{
+  "numeroDocumento": "1264546",
+  "nombre": "Maria",
+  "apellido": "quiñones",
+  "correo": "quiñonescharris@gmail.com",
+  "contrasena": "Maria1993"
+  
+}
+###
+GET http://localhost:5000/api/clientes HTTP/1.1
+
+
+###
+GET http://localhost:5000/api/clientes/674693bd6d9cfcf4c361e3b8 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/clientes/67502f8897a87ff3c0b46442 HTTP/1.1
+Content-Type: application/json
+
+{
+  "numeroDocumento": "12345676",
+  "nombre": "luna",
+  "apellido": "rojas",
+  "correo": "rojasrojas@gmail.com",
+  "contrasena": "wewewewe"
+
+}
+
+###
+DELETE http://localhost:5000/api/clientes/6744bd69d5a96aad34da5b3d HTTP/1.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

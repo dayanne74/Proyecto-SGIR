@@ -1,0 +1,232 @@
+.presentation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0033a0, #348b92, #ff0000); /* Azul, amarillo y rojo difuminados */
+  background-size: 300% 300%; /* Expande el gradiente */
+  animation: gradientAnimation 6s ease infinite; /* Animación de gradiente */
+  color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Animación de gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Contenido de la presentación */
+.presentation-content {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo más suave, con opacidad */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+}
+
+/* Título y descripción */
+.presentation-text h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.presentation-text p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+/* Contenedor del botón */
+.presentation-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo del botón */
+.presentation-button {
+  background-color: #348b92; /* Color del botón */
+  color: white;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.presentation-button:hover {
+  background-color: white;
+  color: #508ecf;
+  border: 2px solid #3f6ebb;
+  transform: scale(1.05);
+}
+
+.presentation-button:focus {
+  outline: none;
+}
+
+
+
+  /* Contenedor principal */
+.hoteles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Título */
+.hoteles-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #212529;
+}
+
+/* Grid */
+.hoteles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 2rem;
+}
+
+/* Tarjeta de hotel */
+.hotel-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen */
+.hotel-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Contenido */
+.hotel-card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.hotel-card-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-card-description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.hotel-card-location,
+.hotel-card-price {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+/* Botón */
+.hotel-card-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hotel-card-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hoteles-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+}
+
+@media (max-width: 576px) {
+  .hoteles-grid {
+    grid-template-columns: 1fr; /* Una columna */
+  }
+}
+
+
+
+.detalle-hotel-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.detalle-hotel-images {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.detalle-hotel-images img {
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.detalle-hotel-info {
+  text-align: left;
+}
+
+.detalle-hotel-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.detalle-hotel-info ul li {
+  margin: 5px 0;
+}
+
+.detalle-hotel-reservar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.detalle-hotel-reservar:hover {
+  background-color: #0056b3;
+}

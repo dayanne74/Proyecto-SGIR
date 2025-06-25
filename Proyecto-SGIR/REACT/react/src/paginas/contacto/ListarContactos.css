@@ -1,0 +1,48 @@
+/* ListaDeContactos.css */
+
+/* Estilo general para el contenedor */
+.lista-contactos {
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    max-width: 1200px; /* Puedes establecer un ancho máximo si lo deseas */
+    margin: 20px auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el encabezado */
+.lista-contactos h4 {
+    text-align: center; /* Centrar el texto */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+thead {
+    background-color: #e7e7e7; /* Color de fondo para el encabezado */
+}
+
+th, td {
+    padding: 12px; /* Espaciado interno en celdas */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+tbody button {
+    background-color: darkred; /* Color de fondo rojo para el botón */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno en el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+tbody button:hover {
+    background-color: darkred; /* Cambia a un rojo más oscuro al pasar el mouse */
+}

@@ -1,0 +1,189 @@
+/* Estilo general para el contenedor principal */
+.dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #5091b7, #803b89);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenedor principal de las secciones */
+.dashboard-content {
+    display: flex;
+    justify-content: space-between;
+    width: 85%; /* Ajuste del ancho del contenedor */
+    max-width: 1400px; /* Ancho máximo ajustado */
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sección del Administrador */
+.admin-section {
+    flex: 1; /* Ocupa el doble de espacio que client-section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    border-right: 2px solid #e0e0e0;
+    border-radius: 20px 0 0 20px; /* Ajuste del borde */
+    transition: transform 0.3s ease-in-out;
+}
+
+.admin-section:hover {
+    transform: scale(1.02);
+}
+
+/* Imagen del Logo */
+.admin-section .logo-image {
+    width: 215px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.admin-section .logo-image:hover {
+    transform: rotate(10deg);
+}
+
+/* Título de la Sección */
+.section-title {
+    font-size: 2.8rem;
+    color: #2d2d2d;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-left: 75px;
+}
+
+/* Descripción de la Sección */
+.section-description {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Botón de Iniciar Sesión */
+.login-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Sección del Cliente */
+.client-section {
+    flex: 1; /* Ocupa la mitad de espacio que admin-section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    border-radius: 0 20px 20px 0; /* Ajuste del borde */
+    transition: transform 0.3s ease-in-out;
+}
+
+.client-section:hover {
+    transform: scale(1.02);
+}
+
+/* Imagen del Logo */
+.client-section .logo-image {
+    width: 190px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.client-section .logo-image:hover {
+    transform: rotate(-10deg);
+}
+
+/* Título de la Sección */
+.client-section .section-title {
+    font-size: 2.8rem;
+    color: #2d2d2d;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Descripción de la Sección */
+.client-section .section-description {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Botón de Iniciar Sesión */
+.client-section .login-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.client-section .login-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .dashboard-content {
+        flex-direction: column;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .admin-section,
+    .client-section {
+        flex: none; /* Deshabilitar flex */
+        width: 100%; /* Usar todo el ancho disponible */
+        margin-bottom: 30px;
+    }
+
+    .logo-image {
+        width: 120px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .login-button {
+        width: 100%;
+        padding: 12px;
+    }
+}

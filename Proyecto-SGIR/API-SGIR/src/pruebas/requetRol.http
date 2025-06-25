@@ -1,0 +1,29 @@
+
+
+POST http://localhost:5000/api/Rol HTTP/1.1
+content-Type: application/json
+
+{
+    "correo": "quinonescharrism@gmail.com",
+    "contrasena": 112243w546
+   
+}
+###
+GET http://localhost:5000/api/Rol/ HTTP/1.1
+
+
+###
+GET http://localhost:5000/api/Rol/67352de0e4f4071fc562a185 HTTP/1.1
+
+###
+PUT  http://localhost:5000/api/Rol/67352de0e4f4071fc562a185  HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "quinonescharrism@gmail.com",
+    "contrasena": 112243w546,
+   
+}
+
+###
+DELETE http://localhost:5000/api/Rol/673cdbab7ca690e9fe242795 HTTP/1.1

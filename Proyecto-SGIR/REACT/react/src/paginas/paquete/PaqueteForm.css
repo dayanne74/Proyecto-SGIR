@@ -1,0 +1,32 @@
+/* src/components/UserForm.css */
+.paquete-Form {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.paquete-Form input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.paquete-Form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #65040c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.paquete-Form button:hover {
+    background-color: #5c0318;
+}

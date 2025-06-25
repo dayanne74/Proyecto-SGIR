@@ -1,0 +1,42 @@
+/* Espaciado para las flechas */
+
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+
+/* Asegurar que el contenido no se solape con las flechas */
+.carousel-inner {
+  padding-left: 30px; /* Deja espacio a la izquierda */
+  padding-right: 30px; /* Deja espacio a la derecha */
+}
+
+/* Botones de fechas debajo del carrusel */
+.dates-container {
+  margin-top: 20px;
+}
+
+.d-flex {
+  justify-content: center;
+}
+
+/* Asegura que los botones "Ver más" no se vean afectados */
+.btn-primary {
+  z-index: 20; /* Asegura que los botones estén sobre otros elementos */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #898989; /* Cambia el color a tu preferencia */
+  border-radius: 100%; /* Para hacerlo redondo (opcional) */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #a49796; /* Color más oscuro al pasar el mouse */
+}

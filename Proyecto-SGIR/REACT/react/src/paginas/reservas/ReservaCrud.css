@@ -1,0 +1,119 @@
+/* Fondo oscuro semi-transparente */
+.edit-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté sobre todo */
+  }
+  
+  /* Contenedor del formulario */
+  .edit-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 60%; /* Ajusta el ancho según lo necesites */
+    max-width: 700px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px; /* Espaciado entre los elementos */
+    position: relative;
+  }
+  
+  /* Título del formulario */
+  .edit-form h3 {
+    grid-column: span 2; /* Toma todo el ancho */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  /* Grupos de formulario */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  /* Etiquetas */
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  /* Entradas y selects */
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover y focus */
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Botón de actualizar */
+  .submit-btn {
+    grid-column: span 2; /* Toma toda la fila */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Hover en el botón */
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botón de cerrar */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    color: #333;
+  }
+.edit-btn{
+    background-color: #3e6d9f;
+}  
+
+.delete-btn{
+    background-color: #a93dca;
+}
+
+.reservas-table th {
+    background-color: #5485ba;
+}

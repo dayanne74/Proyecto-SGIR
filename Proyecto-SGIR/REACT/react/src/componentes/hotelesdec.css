@@ -1,0 +1,157 @@
+.detalles-hotel-container {
+   
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Imagen principal del hotel */
+  .detalles-hotel-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    
+  }
+  
+  .detalles-hotel-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .detalles-hotel-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6), 0 0 30px rgba(0, 123, 255, 0.4); /* Efecto de brillo azul */
+    animation: glow 1.5s ease-in-out infinite alternate; /* Animación de brillo */
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6), 0 0 30px rgba(0, 123, 255, 0.4);
+    }
+    100% {
+      text-shadow: 0 0 15px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8), 0 0 45px rgba(0, 123, 255, 0.6);
+    }
+  }
+  
+  /* Contenedor de la descripción */
+  .detalles-hotel-description {
+    margin-bottom: 30px;
+  }
+  
+  /* Contenedor de la información y servicios juntos (alineados uno al lado del otro) */
+  .detalles-hotel-info-services {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  /* Información del hotel (Ubicación, Precio) */
+  .detalles-hotel-info {
+    flex: 1;
+    margin-right: 20px; /* Espacio entre la información y los servicios */
+  }
+  
+  .detalles-hotel-info p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  /* Servicios destacados */
+  .detalles-hotel-services {
+    flex: 1;
+  }
+  
+  .detalles-hotel-services h2 {
+    font-size: 18px;
+  }
+  
+  .services-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .services-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .service-icon {
+    color: #0078d7;
+    margin-right: 10px;
+  }
+  
+  /* Botón de Reserva */
+  .detalles-hotel-reservar {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .reservar-button {
+    background-color: #0078d7;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reservar-button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Botón de volver */
+  .volver-button {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .volver-button:hover {
+    background-color: #ddd;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 15px; /* Espacio entre las imágenes */
+  }
+  
+  .gallery-grid img {
+    width: 100%; /* Asegura que las imágenes llenen su contenedor */
+    height: 200px; /* Establece una altura uniforme */
+    object-fit: cover; /* Mantiene la proporción de la imagen y la ajusta al contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+  }

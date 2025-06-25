@@ -1,0 +1,42 @@
+### Crear un nuevo hotel
+POST http://localhost:5000/api/hotels HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NDFkMWYyYWE5NDZhNWZmOWE5ZDg2MiIsIm5vbWJyZSI6InBhb2xhIiwiYXBlbGxpZG8iOiJRdWnDsW9uZXMiLCJyb2xlcyI6WyJBZG1pbmlzdHJhZG9yIl0sImlhdCI6MTc0OTQxNjQ4MiwiZXhwIjoxNzQ5NDU5NjgyfQ.ujWj1Zl882DCeUeY2LeK_Hbk8CiSHEZ9WIXLESvEM6M
+
+{
+  "nombre": "Hyatt Regency",
+  "ubicacion": "Cartagena",
+  "numeroHabitaciones": "4 habitaciones",
+  "numeroPersonas": "10 personas",
+  "comida": "incluida",
+  "precio": 700000,
+  "categoria": "media"
+}
+
+###
+
+### Obtener todos los hoteles
+GET http://localhost:5000/api/hotels HTTP/1.1
+###
+
+### Obtener un hotel específico por ID
+GET http://localhost:5000/api/hotels/672ba0df40b27ac865281e2b HTTP/1.1
+###
+
+### Actualizar un hotel específico por ID
+PUT http://localhost:5000/api/hotels/672ba0df40b27ac865281e2b HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Hotel Molino de Viento",
+    "ubicacion": "San Andres",
+    "numeroHabitaciones": 12,
+    "numeroPersonas": 60,
+    "comida": "incluida",
+    "precio": 1000000,
+    "categoria": "baja"
+}
+###
+
+### Eliminar un hotel específico por ID
+DELETE http://localhost:5000/api/hotels/6723256cd3ec2f85890b0357 HTTP/1.1

@@ -1,0 +1,348 @@
+/* Crear un grid container que incluya formulario y lista */
+.comentarios-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+  display: grid;
+  grid-template-areas: 
+    "titulo titulo"
+    "form-titulo lista-titulo"
+    "form lista";
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Título principal */
+.comentarios-titulo {
+  grid-area: titulo;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 0.8s ease-out;
+}
+
+/* Contenedor principal en dos columnas - removemos ya que usamos grid areas */
+
+/* Formulario */
+.comentarios-form {
+  grid-area: form;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInLeft 0.8s ease-out;
+  height: fit-content;
+}
+
+.comentarios-form h3 {
+  grid-area: form-titulo;
+  color: rgb(74, 135, 142);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  background: none;
+  text-align: left;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  animation: none;
+}
+
+/* Inputs y select */
+.comentarios-form input,
+.comentarios-form select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  box-sizing: border-box;
+}
+
+.comentarios-form input:focus,
+.comentarios-form select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.comentarios-form input::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+/* Botones */
+.comentarios-btn-agregar,
+.comentarios-btn-editar,
+.comentarios-btn-eliminar,
+.comentarios-btn-cancelar {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comentarios-btn-agregar {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.comentarios-btn-agregar:hover {
+  background: linear-gradient(135deg, #38a169, #2f855a);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(72, 187, 120, 0.4);
+}
+
+.comentarios-btn-editar {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+}
+
+.comentarios-btn-editar:hover {
+  background: linear-gradient(135deg, #3182ce, #2c5282);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(66, 153, 225, 0.4);
+}
+
+.comentarios-btn-eliminar {
+  background: linear-gradient(135deg, #f56565, #e53e3e);
+  color: white;
+}
+
+.comentarios-btn-eliminar:hover {
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 101, 101, 0.4);
+}
+
+.comentarios-btn-cancelar {
+  background: linear-gradient(135deg, #a0aec0, #718096);
+  color: white;
+}
+
+.comentarios-btn-cancelar:hover {
+  background: linear-gradient(135deg, #718096, #4a5568);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(160, 174, 192, 0.4);
+}
+
+/* Sección de la lista - removemos ya que usamos grid areas */
+
+/* Título de la lista */
+.comentarios-lista-titulo {
+  grid-area: lista-titulo;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Lista de comentarios */
+.comentarios-lista {
+  grid-area: lista;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comentarios-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.comentarios-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 1);
+}
+
+.comentarios-item span {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.comentarios-item span div {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.comentarios-item span div strong {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comentarios-item span div:not(:has(strong)) {
+  color: #2d3748;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #667eea;
+}
+
+/* Contenedor de botones en cada item */
+.comentarios-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.comentarios-item span {
+  flex: 1;
+  min-width: 300px;
+}
+
+.comentarios-item .comentarios-btn-editar,
+.comentarios-item .comentarios-btn-eliminar {
+  margin-left: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .comentarios-container {
+    grid-template-areas: 
+      "titulo"
+      "form-titulo" 
+      "form"
+      "lista-titulo"
+      "lista";
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .comentarios-form h3,
+  .comentarios-lista-titulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .comentarios-container {
+    padding: 1rem;
+    grid-template-areas: 
+      "titulo"
+      "form-titulo" 
+      "form"
+      "lista-titulo"
+      "lista";
+    grid-template-columns: 1fr;
+  }
+  
+  .comentarios-titulo {
+    font-size: 2rem;
+  }
+  
+  .comentarios-form {
+    padding: 1.5rem;
+  }
+  
+  .comentarios-item {
+    flex-direction: column;
+  }
+  
+  .comentarios-item span {
+    min-width: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .comentarios-item .comentarios-btn-editar,
+  .comentarios-item .comentarios-btn-eliminar {
+    margin: 0.25rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .comentarios-titulo {
+    font-size: 1.5rem;
+  }
+  
+  .comentarios-form h3 {
+    font-size: 1.2rem;
+  }
+  
+  .comentarios-form input,
+  .comentarios-form select {
+    padding: 0.8rem;
+  }
+}

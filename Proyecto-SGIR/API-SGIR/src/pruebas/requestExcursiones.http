@@ -1,0 +1,45 @@
+###
+POST http://localhost:5000/api/excursiones HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NGEwMjZkNTc3OTJhNDZhYzlkODQxZCIsIm5vbWJyZSI6ImVkd2luIiwiYXBlbGxpZG8iOiJtYXJpbiIsInJvbGVzIjpbImFkbWluaXN0cmFkb3IiXSwiaWF0IjoxNzQ5NjgwODAzLCJleHAiOjE3NDk3MjQwMDN9.Wmz2TFWkwYW5PuKM8ft1d8iSLrbklGmhMriULaB8ScI
+
+
+{
+    "nombre": "excursion 2",
+    "descripcion": "Aqui podras disfrutar de los mares y ambientes que nos ofrece santa marta",
+    "destino": "Santa Marta",
+    "precio": 1500000,
+    "duracion": "8 dias",
+    "transporte": "Bus",
+    "comida": "Variedad",
+    "actividad": "caminata"
+}
+###
+
+GET http://localhost:5000/api/excursiones HTTP/1.1
+
+###
+
+GET http://localhost:5000/api/excursiones/673763a611528262c31b6301 HTTP/1.1
+
+###
+
+PUT http://localhost:5000/api/excursiones/674c9fd6feae43b1b43b98dd HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "excursion 2",
+    "descripcion": "Aqui podras disfrutar de los mares y ambientes que nos ofrece santa marta",
+    "destino": "soacha colombia",
+    "precio": 1500000,
+    "duracion": "8 dias",
+    "transporte": "Bus",
+    "comida": "Variedad",
+    "actividad": "Mar"
+}
+
+###
+
+DELETE http://localhost:5000/api/excursiones/673763a611528262c31b6301 HTTP/1.1
+
+###

@@ -1,0 +1,75 @@
+
+.hotel-crud-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hotel-form .form-group {
+  margin-bottom: 15px;
+}
+
+.hotel-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.hotel-form input,
+.hotel-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.hotel-form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hotel-form button:hover {
+  background-color: #0056b3;
+}
+
+.hotel-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.hotel-table th,
+.hotel-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.hotel-table th {
+  background-color: #f4f4f4;
+}
+
+.hotel-table button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.hotel-table button:hover {
+  background-color: #218838;
+}
+
+.hotel-image-preview {
+  max-width: 100px;
+  margin-top: 10px;
+}

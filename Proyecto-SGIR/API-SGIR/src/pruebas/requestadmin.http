@@ -1,0 +1,31 @@
+###
+POST http://localhost:5000/api/admin HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombreCompleto": "Dayanne Moque",
+    "correo": "moquezea@gmail.com",
+    "nit": "1025533562",
+    "contrasena": "Maria1993"
+}
+
+###
+GET http://localhost:5000/api/admin HTTP/1.1
+
+### 
+GET http://localhost:5000/api/admin/674fa405424c7ba091a82a33
+Content-Type: application/json
+###
+PUT http://localhost:5000/api/admin/674fa405424c7ba091a82a33 
+Content-Type: application/json
+
+{
+    "nombreCompleto": "Nuevo Nombre",
+    "correo": "nuevoemail@gmail.com",
+    "nit": "656746588",
+    "contraseña": "maaria78456"
+}
+
+###
+DELETE http://localhost:5000/api/admin/674fa04fec606caa62f26bce HTTP/1.1
+Content-Type: application/json

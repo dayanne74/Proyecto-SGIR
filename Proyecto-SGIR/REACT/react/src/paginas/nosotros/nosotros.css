@@ -1,0 +1,387 @@
+/* Estilos para el header (para evitar que el logo tape) */
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.custom-logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-logo img {
+  height: 100%;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.custom-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.custom-nav li {
+  margin: 0;
+}
+
+.custom-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-nav a:hover {
+  background-color: #16798c;
+  color: white;
+}
+
+/* Contenedor principal con la imagen borrosa */
+.about-page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 20px 50px 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Imagen de fondo difuminada */
+.about-page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/destinos/pack4.jpg') center/cover no-repeat;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Caja principal */
+.about-page-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto 50px auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tarjeta del gerente */
+.about-manager-card {
+  display: flex;
+  align-items: center;
+  background: rgba(249, 249, 249, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  border: 1px solid rgba(22, 121, 140, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-manager-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del gerente */
+.about-manager-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #16798c;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-manager-img:hover {
+  transform: scale(1.05);
+}
+
+.about-manager-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Información del gerente */
+.about-manager-info {
+  flex: 1;
+}
+
+.about-manager-info h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.about-manager-title {
+  font-size: 1.1rem;
+  color: #16798c;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.about-manager-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Sección Misión y Visión */
+.about-mission-vision {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-mission, .about-vision {
+  flex: 1;
+  background: rgba(244, 244, 244, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid rgba(22, 121, 140, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-mission:hover, .about-vision:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-mission h3, .about-vision h3 {
+  color: #16798c;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.about-mission p, .about-vision p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Sección del mapa */
+.about-map-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(22, 121, 140, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-map-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-map-container h3 {
+  font-size: 1.5rem;
+  color: #16798c;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.about-map {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-map iframe {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.about-map iframe:hover {
+  filter: grayscale(0%);
+}
+
+/* Iconos */
+.about-icon {
+  margin-right: 10px;
+  color: #16798c;
+  font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-header {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .custom-logo {
+    height: 50px;
+  }
+
+  .custom-logo img {
+    max-width: 120px;
+  }
+
+  .custom-nav ul {
+    gap: 10px;
+  }
+
+  .custom-nav a {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+
+  .about-page-wrapper {
+    padding: 85px 15px 30px 15px;
+  }
+
+  .about-page-container {
+    width: 95%;
+    margin: 15px auto 30px auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .about-manager-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .about-manager-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-manager-info h1 {
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  .about-mission-vision {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-mission h3, .about-vision h3, .about-map-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-mission p, .about-vision p {
+    font-size: 0.9rem;
+  }
+
+  .about-map-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-header {
+    height: 60px;
+    padding: 0 10px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .custom-logo {
+    height: 35px;
+  }
+
+  .custom-logo img {
+    max-width: 100px;
+  }
+
+  .custom-nav ul {
+    gap: 5px;
+  }
+
+  .custom-nav a {
+    padding: 4px 6px;
+    font-size: 0.8rem;
+  }
+
+  .about-page-wrapper {
+    padding: 70px 10px 20px 10px;
+  }
+
+  .about-page-container {
+    width: 98%;
+    margin: 10px auto 20px auto;
+    padding: 15px;
+  }
+
+  .about-manager-card {
+    padding: 15px;
+  }
+
+  .about-manager-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about-manager-info h1 {
+    font-size: 1.3rem;
+  }
+
+  .about-mission, .about-vision {
+    padding: 15px;
+  }
+
+  .about-map-container {
+    padding: 10px;
+  }
+}

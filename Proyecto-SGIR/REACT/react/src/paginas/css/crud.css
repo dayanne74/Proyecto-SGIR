@@ -1,0 +1,177 @@
+/* Contenedor principal */
+.clientes-crud-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* Título */
+.titulo {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Contenedor de la sección de formulario y lista */
+.crud-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Espacio entre el formulario y la lista */
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* Contenedor del formulario */
+.formulario-container {
+  flex: 1;
+  max-width: 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.formulario-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Campos de formulario */
+.formulario-campo {
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Estilo de los botones */
+.formulario-botones {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.formulario-botones button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agregar {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-agregar:hover {
+  background-color: #218838;
+}
+
+.btn-guardar {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-guardar:hover {
+  background-color: #0056b3;
+}
+
+.btn-cancelar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background-color: #c82333;
+}
+
+/* Contenedor de la lista de clientes */
+.lista-container {
+  flex: 1;
+  max-width: 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* Título de la lista */
+.lista-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo de los items de cliente */
+.cliente-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cliente-info {
+  flex: 1;
+}
+
+.cliente-info span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.cliente-botones {
+  display: flex;
+  gap: 10px;
+}
+
+.cliente-botones button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar {
+  background-color: #ffc107;
+  color: white;
+}
+
+.btn-editar:hover {
+  background-color: #e0a800;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background-color: #c82333;
+}

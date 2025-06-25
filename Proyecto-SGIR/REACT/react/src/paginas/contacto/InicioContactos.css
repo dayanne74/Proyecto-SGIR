@@ -1,0 +1,428 @@
+/* Variables CSS optimizadas para la imagen actual */
+:root {
+    --primary-color: #00bfff;
+    --primary-hover: #0099cc;
+    --secondary-color: #87ceeb;
+    --accent-color: #1e90ff;
+    --text-light: #ffffff;
+    --text-muted: #ffffff;
+    --bg-overlay: rgba(0, 30, 60, 0.4); /* Overlay suave que permite ver la imagen */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-bg-strong: rgba(0, 50, 100, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacto__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    
+    /* Fondo optimizado - overlay muy suave para mostrar la imagen */
+    background: 
+        linear-gradient(135deg, var(--bg-overlay), rgba(0, 50, 100, 0.2)),
+        url(../);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Centrado */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Sección de información del lado izquierdo mejorada */
+.box-info {
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 2;
+    position: relative;
+    padding: 40px;
+    
+    /* Fondo semitransparente para mejor legibilidad */
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+}
+
+.box-info > h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin: 0;
+    text-align: left;
+    line-height: 1.2;
+    
+    /* Texto muy visible con sombra fuerte */
+    color: var(--text-light);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(0, 191, 255, 0.3);
+    
+    /* Efecto de gradiente sutil */
+    background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.data > p {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+    
+    /* Texto muy legible */
+    color: var(--text-light);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.data > p:hover {
+    transform: translateX(15px);
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.data > p > i {
+    color: var(--primary-color);
+    margin-right: 20px;
+    font-size: 1.8rem;
+    min-width: 40px;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+    filter: drop-shadow(0 0 8px rgba(0, 191, 255, 0.4));
+}
+
+/* Formulario con mejor contraste */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    z-index: 2;
+    position: relative;
+}
+
+/* Borde superior destacado */
+form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--primary-color) 0%, 
+        var(--accent-color) 50%, 
+        var(--primary-color) 100%);
+    border-radius: 20px 20px 0 0;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-box > input,
+.input-box > textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    box-sizing: border-box;
+    outline: none;
+    backdrop-filter: blur(10px);
+    
+    /* Mejor contraste para el texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.input-box > input {
+    height: 60px;
+}
+
+.input-box > textarea {
+    height: 130px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.input-box > input::placeholder,
+.input-box > textarea::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.input-box > input:focus,
+.input-box > textarea:focus {
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 4px rgba(0, 191, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+    color: transparent;
+}
+
+.input-box > i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.input-box > input:focus ~ i {
+    color: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+}
+
+/* Botón destacado */
+form > button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: var(--text-light);
+    border: none;
+    border-radius: 12px;
+    padding: 18px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+}
+
+form > button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+form > button:hover {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-hover) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 191, 255, 0.5);
+}
+
+form > button:hover::before {
+    left: 100%;
+}
+
+form > button:active {
+    transform: translateY(-1px);
+}
+
+/* Contenedor de confirmación */
+.confirmacion-container {
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    margin: 20px 0;
+    position: relative;
+}
+
+.confirmacion-container h2 {
+    color: var(--text-light);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.confirmacion-container button {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-light);
+    border: none;
+    border-radius: 12px;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 250px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+}
+
+.confirmacion-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 191, 255, 0.5);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box-info {
+    animation: fadeInUp 1s ease-out;
+}
+
+form {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+/* Responsividad mejorada */
+@media (max-width: 1024px) {
+    .contacto__container {
+        gap: 30px;
+        padding: 30px;
+        background-attachment: scroll;
+    }
+    
+    .box-info, form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto__container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+        background-attachment: scroll;
+    }
+    
+    .box-info {
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .box-info > h1 {
+        letter-spacing: 2px;
+        text-align: center;
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+    
+    .data > p {
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+    
+    .data > p:hover {
+        transform: none;
+    }
+    
+    form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto__container {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .box-info {
+        padding: 25px;
+    }
+    
+    .box-info > h1 {
+        letter-spacing: 1px;
+    }
+    
+    form {
+        padding: 25px;
+    }
+    
+    .input-box > input,
+    .input-box > textarea {
+        padding: 14px 18px;
+        font-size: 0.95rem;
+    }
+    
+    .data > p {
+        font-size: 1rem;
+        padding: 15px 0;
+    }
+    
+    .data > p > i {
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+}
+
+/* Mejora para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .box-info > h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .data > p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .data > p > i {
+        margin-right: 0;
+    }
+}

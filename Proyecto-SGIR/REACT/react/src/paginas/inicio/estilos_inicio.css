@@ -1,0 +1,147 @@
+.inicio-background {
+    height: 100vh;
+    background-image: url('../../assets/i.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal de la sección */
+.inicio-content {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+/* Sección de la izquierda con logo y título */
+.inicio-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.inicio-logo {
+    max-width: 100%;  /* El logo no excederá el 100% del contenedor */
+    height: auto;     /* Mantiene la proporción original */
+    width: 150px;     /* Tamaño estándar del logo */
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+/* Sección de la derecha con el botón y enlaces */
+.inicio-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+ h2 {
+    margin-right: 100px;
+}
+.admin-description {
+    font-size: 1rem;
+    color: #fffefe;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    margin-right: 60px;
+}
+
+/* Estilos para la descripción en la sección Cliente */
+.client-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.inicio-buttons {
+    margin-right: 100px;
+    text-decoration: none;
+}
+.inicio-buttons a{
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para los enlaces de términos y políticas */
+.inicio-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.inicio-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9em;
+}
+
+.inicio-links a:hover {
+    text-decoration: none;
+}
+
+/* Estilos para el icono de ayuda */
+.inicio-icon-link {
+    margin-top: 10px;
+    margin-right: 170px;
+}
+
+.inicio-icon-link i {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .inicio-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inicio-left, .inicio-right {
+        align-items: center;
+    }
+
+    .inicio-right {
+        margin-top: 20px;
+    }
+
+    .inicio-logo {
+        width: 12px;  /* Tamaño ajustado del logo en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}

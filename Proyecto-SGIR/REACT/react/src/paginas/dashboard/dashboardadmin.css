@@ -1,0 +1,178 @@
+/* Contenedor principal */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background: #f4f4f9;
+}
+
+/* Menú lateral */
+.sidebar {
+    width: 270px;
+    background: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Menú */
+.menu {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.menu li a:hover {
+    background: #34495e;
+}
+
+.menu li a svg {
+    margin-right: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Banner de bienvenida */
+.welcome-banner {
+    background: #2c3e50;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Sección de Información */
+.info-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    width: 85%; /* Reduce el ancho */
+    margin: 0 auto; /* Centra la caja */
+    text-align: center; /* Centra el texto */
+}
+
+.info-section h2 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Centra los elementos de la lista */
+}
+
+
+.info-list li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro de cada <li> */
+    gap: 8px; /* Espaciado entre el icono y el texto */
+}
+
+.info-list li svg {
+    margin-right: 8px;
+}
+
+/* Acceso Rápido */
+.quick-access {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quick-access h2 {
+    font-size: 1.5rem;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.access-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.access-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.access-btn:hover {
+    background: #2ecc71;
+    transform: translateY(-5px);
+}
+
+.access-btn svg {
+    margin-right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .access-buttons {
+        flex-direction: column;
+    }
+}
+/* Estilos del logo centrado */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+}

@@ -1,0 +1,72 @@
+### Crear un nuevo paquete
+POST http://localhost:5000/api/paquete HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NDFkMWYyYWE5NDZhNWZmOWE5ZDg2MiIsIm5vbWJyZSI6InBhb2xhIiwiYXBlbGxpZG8iOiJRdWnDsW9uZXMiLCJyb2xlcyI6WyJBZG1pbmlzdHJhZG9yIl0sImlhdCI6MTc0OTMyNTEwNiwiZXhwIjoxNzQ5MzY4MzA2fQ.Tme-8VvL6rkskw7uSIAoTG-9U96bVWJiC-3PSs-bP1k
+
+
+{
+  "destino": "Santa Marta",
+  "actividad": "Buceo",
+  "descripcion": "todo feliz",
+  "numeroPersonas": "2 personas",
+  "nombre": "paquete 1",
+  "precio": 1000000,
+  "transporte": "avion",
+  "comida": "todo incluido"
+}
+
+
+
+
+
+###
+
+### Obtener todos los paquetes
+GET http://localhost:5000/api/paquete HTTP/1.1
+###
+
+
+
+### Actualizar un paquete específico por ID
+PUT http://localhost:5000/api/paquete/674f2a60b580e1d6af341e9e HTTP/1.1
+Content-Type: application/json
+
+{
+    "destino": "San Andres",
+    "actividad": "Buceo",
+    "numeroPersonas": 4,
+    "nombre": "paquete3",
+    "precio": "1620000",
+    "transporte":  "avion",
+    "comida": "almuerzo incluido"
+}
+###
+
+### Eliminar un paquete específico por ID
+DELETE http://localhost:5000/api/paquete/67478971291808bb22cfd131 HTTP/1.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

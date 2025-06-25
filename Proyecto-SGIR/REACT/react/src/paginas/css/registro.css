@@ -1,0 +1,76 @@
+.registro-main {
+  background-color: #ffffff;
+  padding: 50px 20px; /* Espaciado interno para que no se pegue al borde */
+  min-height: 100vh; /* Asegura que cubra al menos el alto de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el contenido */
+}
+.registro-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  color: #000;
+  border-radius: 15px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+.registro-titulo {
+  text-align: center;
+  color: #00796b;
+}
+
+.registro-p {
+  text-align: center;
+  color: #004d40;
+}
+
+/* Estilos del formulario */
+.registro-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registro-label {
+  margin-bottom: 5px;
+}
+
+.registro-input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #b2dfdb;
+}
+
+.registro-input:focus {
+  border-color: #00796b;
+}
+
+/* Botón de envío */
+.registro-button {
+  padding: 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.registro-button:hover {
+  background-color: #004d40;
+}
+
+/* Mensaje de error */
+.registro-error {
+  color: #d32f2f;
+}
+
+/* Enlace a iniciar sesión */
+.registro-link {
+  color: #00796b;
+}
+
+.registro-link:hover {
+  text-decoration: underline;
+}

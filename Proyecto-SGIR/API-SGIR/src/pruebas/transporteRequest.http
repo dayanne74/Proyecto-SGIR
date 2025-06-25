@@ -1,0 +1,25 @@
+###
+
+POST http://localhost:5000/api/transporte HTTP/1.1
+Content-Type: application/json
+
+{    
+    "nombre": "Bus nerkwork",
+    "capacidad": 40,
+    "descripcion": "Bus con asientos reclinables y aire acondicionado para viajes largos.",
+    "comodidades": ["Baño"],
+    "placa": "ZYX-9876",
+    "categoria": "Bus XL"
+}
+
+###
+
+GET http://localhost:5000/api/transporte HTTP/1.1
+
+###
+
+GET http://localhost:5000/api/transporte/6759182fc767cadc68d97c04 HTTP/1.1
+
+###
+
+DELETE http://localhost:5000/api/transporte/6759182fc767cadc68d97c04 HTTP/1.1
