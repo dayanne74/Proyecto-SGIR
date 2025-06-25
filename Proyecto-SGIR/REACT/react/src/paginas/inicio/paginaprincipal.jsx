@@ -14,12 +14,13 @@ const Principal = () => {
     const [testimonials, setTestimonials] = useState([]);
     const sliderImages = ["colombia2.jpeg", "colombia3.jpeg", "colombia5.jpg"];
     const testimonialImages = [persona1, persona2, persona3];
+    const API_URL = import.meta.env.VITE_API;
 
     // Cargar testimonios
     useEffect(() => {
         const fetchTestimonials = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/comentarios');
+                const response = await axios.get(`${API_URL}/comentarios`, nuevoComentario);
                 setTestimonials(response.data);
             } catch (error) {
                 console.error('Error al obtener testimonios:', error);
@@ -47,7 +48,7 @@ const Principal = () => {
     // Función para actualizar comentarios
     const refreshComments = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/comentarios');
+            const response = await axios.get(`${API_URL}/comentarios`, nuevoComentario);
             setTestimonials(response.data);
         } catch (error) {
             console.error('Error al actualizar comentarios:', error);
