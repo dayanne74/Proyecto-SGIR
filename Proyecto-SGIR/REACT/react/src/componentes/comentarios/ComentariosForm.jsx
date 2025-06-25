@@ -9,6 +9,8 @@ const ComentariosForm = ({ onCommentSubmit }) => {
     opinion: "",
   });
 
+  const API_URL = import.meta.env.VITE_API;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -17,7 +19,7 @@ const ComentariosForm = ({ onCommentSubmit }) => {
         return;
       }
 
-      await axios.post("http://localhost:5000/api/comentarios", nuevoComentario);
+      await axios.post(`${API_URL}/comentarios`, nuevoComentario);
       onCommentSubmit();
       
       setNuevoComentario({
