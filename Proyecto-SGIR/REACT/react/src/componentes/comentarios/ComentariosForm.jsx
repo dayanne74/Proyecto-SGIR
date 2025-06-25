@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './comentarios.css';
 
+// ✅ Variable global fuera del componente
+const API_URL = import.meta.env.VITE_API;
+
 const ComentariosForm = ({ onCommentSubmit }) => {
   const [nuevoComentario, setNuevoComentario] = useState({
     nombreCompleto: "",
     valoracion: "5 estrellas",
     opinion: "",
   });
-
-  const API_URL = import.meta.env.VITE_API;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,15 +20,16 @@ const ComentariosForm = ({ onCommentSubmit }) => {
         return;
       }
 
+      // ✅ Uso de la variable de entorno en la llamada a la API
       await axios.post(`${API_URL}/comentarios`, nuevoComentario);
       onCommentSubmit();
-      
+
       setNuevoComentario({
         nombreCompleto: "",
         valoracion: "5 estrellas",
         opinion: "",
       });
-      
+
       alert("¡Gracias por tu comentario!");
     } catch (error) {
       console.error("Error al enviar comentario:", error);
@@ -45,14 +47,14 @@ const ComentariosForm = ({ onCommentSubmit }) => {
               type="text"
               placeholder="Tu nombre completo"
               value={nuevoComentario.nombreCompleto}
-              onChange={(e) => setNuevoComentario({...nuevoComentario, nombreCompleto: e.target.value})}
+              onChange={(e) => setNuevoComentario({ ...nuevoComentario, nombreCompleto: e.target.value })}
               required
             />
           </div>
           <div className="form-group">
             <select
               value={nuevoComentario.valoracion}
-              onChange={(e) => setNuevoComentario({...nuevoComentario, valoracion: e.target.value})}
+              onChange={(e) => setNuevoComentario({ ...nuevoComentario, valoracion: e.target.value })}
             >
               <option value="5 estrellas">⭐⭐⭐⭐⭐ Excelente</option>
               <option value="4 estrellas">⭐⭐⭐⭐ Muy bueno</option>
@@ -65,7 +67,7 @@ const ComentariosForm = ({ onCommentSubmit }) => {
             <textarea
               placeholder="Cuéntanos tu experiencia..."
               value={nuevoComentario.opinion}
-              onChange={(e) => setNuevoComentario({...nuevoComentario, opinion: e.target.value})}
+              onChange={(e) => setNuevoComentario({ ...nuevoComentario, opinion: e.target.value })}
               required
             />
           </div>
