@@ -1,0 +1,10 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar logs
+*.log
+npm-debug.log*
+
+# Ignorar configuraciones del sistema operativo
+.DS_Store
+Thumbs.db
