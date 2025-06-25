@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import usuarioSchema from '../models/usuario.js';
+import Usuario from '../models/usuario.js';
 
 // Middleware para verificar token JWT
 export const verificarToken = async (req, res, next) => {
@@ -20,19 +20,18 @@ export const verificarToken = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     
     // Buscar el usuario en la base de datos
-    const user = await usuarioSchema
+    const user = await Usuario
    .findById(decoded.id)
-    .select('-password')
+    .select('-contrasena')
     .populate('roles', 'nombreRol');
      
     if (!user) {
-      req.user = user;
-      return res.status(401).json({
-        success: false,
-        message: 'Usuario no encontrado'
-        
-      });
-    }
+  return res.status(401).json({
+    success: false,
+    message: 'Usuario no encontrado'
+  });
+}
+
   if (!user.estadoUsuario) {
       return res.status(401).json({
         success: false,
