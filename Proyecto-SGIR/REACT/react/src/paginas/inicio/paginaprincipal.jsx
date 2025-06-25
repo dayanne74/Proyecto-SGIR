@@ -20,7 +20,7 @@ const Principal = () => {
     useEffect(() => {
         const fetchTestimonials = async () => {
             try {
-                const response = await axios.get(`${API_URL}/comentarios`, nuevoComentario);
+                const response = await axios.get(`${API_URL}/comentarios`);
                 setTestimonials(response.data);
             } catch (error) {
                 console.error('Error al obtener testimonios:', error);
@@ -48,7 +48,7 @@ const Principal = () => {
     // Función para actualizar comentarios
     const refreshComments = async () => {
         try {
-            const response = await axios.get(`${API_URL}/comentarios`, nuevoComentario);
+            const response = await axios.get(`${API_URL}/comentarios`);
             setTestimonials(response.data);
         } catch (error) {
             console.error('Error al actualizar comentarios:', error);
