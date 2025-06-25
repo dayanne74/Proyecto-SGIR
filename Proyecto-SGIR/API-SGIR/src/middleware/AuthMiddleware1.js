@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import usuarioSchema from '../models/Usuario.js';
+import usuarioSchema from '../models/usuario';
 
 // Middleware para verificar token JWT
 export const verificarToken = async (req, res, next) => {
