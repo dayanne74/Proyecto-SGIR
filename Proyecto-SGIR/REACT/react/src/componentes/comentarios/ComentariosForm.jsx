@@ -21,7 +21,7 @@ const ComentariosForm = ({ onCommentSubmit }) => {
       }
 
       // ✅ Uso de la variable de entorno en la llamada a la API
-      await axios.post(`${API_URL}/comentarios`, nuevoComentario);
+      await api.post('/comentarios', nuevoComentario);
       onCommentSubmit();
 
       setNuevoComentario({
