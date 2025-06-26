@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './comentarios.css';
-import api from '../../../api/cliente';  
+import api from '../../contexts/api';  
 // ✅ Variable global fuera del componente
 const API_URL = import.meta.env.VITE_API;
 
