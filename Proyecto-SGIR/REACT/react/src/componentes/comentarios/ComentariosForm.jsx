@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './comentarios.css';
-
+import api from '../../../api/cliente';  
 // ✅ Variable global fuera del componente
 const API_URL = import.meta.env.VITE_API;
 

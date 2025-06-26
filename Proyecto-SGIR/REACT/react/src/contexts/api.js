@@ -1,15 +1,14 @@
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API;  // https://proyecto-sgir.onrender.com/api
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Ajusta según tu entorno
-  timeout: 10000,
-  headers: {
-    'Content-Type': 'application/json',
-  },
+  baseURL: API_URL,
+  headers: { 'Content-Type': 'application/json' },
 });
 
-// Interceptor para añadir el token automáticamente
-api.interceptors.request.use((config) => {
+// ▶️ Interceptor para inyectar el token en todas las peticiones
+api.interceptors.request.use(config => {
   const token = localStorage.getItem('token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;

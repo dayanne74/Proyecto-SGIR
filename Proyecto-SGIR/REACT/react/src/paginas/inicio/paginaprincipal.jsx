@@ -8,26 +8,27 @@ import persona2 from '../../assets/inicio/persona2.jpg';
 import persona3 from '../../assets/inicio/persona3.jpg';
 import ComentariosForm from '../../componentes/comentarios/ComentariosForm';
 import ComentariosList from '../../componentes/comentarios/ComentariosList';
-import api from '../../api/cliente'; 
+import api from '../../contexts/api'; 
 const Principal = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [testimonials, setTestimonials] = useState([]);
-    const sliderImages = ["colombia2.jpeg", "colombia3.jpeg", "colombia5.jpg"];
-    const testimonialImages = [persona1, persona2, persona3];
-   
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimonials, setTestimonials] = useState([]);
+  const sliderImages = ["colombia2.jpeg", "colombia3.jpeg", "colombia5.jpg"];
+  const testimonialImages = [persona1, persona2, persona3];
 
-    // Cargar testimonios
-    useEffect(() => {
-        const fetchTestimonials = async () => {
-            try {
-                api.get('/comentarios')
-                setTestimonials(response.data);
-            } catch (error) {
-                console.error('Error al obtener testimonios:', error);
-            }
-        };
-        fetchTestimonials();
-    }, []);
+  // Cargar testimonios
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        // 1) Esperamos la respuesta
+        const response = await api.get('/comentarios');
+        // 2) Actualizamos el estado con los datos
+        setTestimonials(response.data);
+      } catch (error) {
+        console.error('Error al obtener testimonios:', error);
+      }
+    };
+    fetchTestimonials();
+  }, []);
 
     // Slider automático
     useEffect(() => {

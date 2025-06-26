@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../contexts/AuthContext"; 
+import api from "../contexts/api";  
 import { Mail, Lock, AlertCircle, Eye, EyeOff } from "lucide-react";
 import "./Login.css";
 
@@ -39,10 +40,7 @@ const Login = () => {
     setIsLoading(true);
     
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/autentificaciones/login",
-        { correo, contrasena }
-      );
+      const res = await api.post('/autentificaciones/login', { correo, contrasena })
       const { token } = res.data;
       // 3️⃣ Decodificamos y sacamos roles
       const decoded = decodeToken(token);
